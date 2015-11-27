@@ -2,7 +2,7 @@ body {
   background: #272C33;
 }
 .keyboard, input {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin: 0px auto;
   width: 260px;
 }
@@ -21,16 +21,26 @@ body {
   background: #C7D5D8;
 }
 
-.keyboard.special {
+.keyboard .special {
   color: #272C33;
+  font-size: 12pt;
   background:#79ADD3;
-  border: 1px solid blue;
+  margin-top: 4px;
+  border-radius: 4px;
+  padding: 0px 4px;
 }
 
 p {
-  color: white;
+  background: #79ADD3;
+  color: #272C33;
+  padding: 2px;
+  border-radius: 4px;
   font-family: monospace;
   font-size: 16pt;
+  text-align: center;
+}
+p:active {
+  background:
 }
 
 input {
