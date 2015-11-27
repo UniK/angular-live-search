@@ -4,7 +4,7 @@ body {
 .keyboard, input {
   border: 1px solid black;
   margin: 0px auto;
-  width: 270px;
+  width: 260px;
 }
 
 .keyboard li {

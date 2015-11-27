@@ -11,53 +11,18 @@
 
   <div class="keyboard">
 
-    <div ng-show="input.length ">
-      <p ng-repeat="word in keyword.word | filter:input">{{ word }}</p>
+    <div ng-show="input.length">
+      <p ng-repeat="word in keyword.word | filter:input | limitTo: 3">{{ word }}</p>
     </div>
 
     <input ng-model="input" type="text">
 
-    <ul>
-      <li>a</li>
-      <li>b</li>
-      <li>c</li>
-      <li>d</li>
-      <li>e</li>
-      <li>f</li>
-      <li>g</li>
-      <li>h</li>
-      <li>i</li>
-      <li>j</li>
-      <li>k</li>
-      <li>l</li>
-      <li>m</li>
-      <li>n</li>
-      <li>o</li>
-      <li>p</li>
-      <li>q</li>
-      <li>r</li>
-      <li>s</li>
-      <li>t</li>
-      <li>u</li>
-      <li>v</li>
-      <li>w</li>
-      <li>x</li>
-      <li>y</li>
-      <li>z</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>0</li>
+    <ol>
+      <li ng-repeat="letter in keyword.letters">{{ letter }}</li>
       <li>clear</li>
       <li>delete</li>
       <li>space</li>
-    </ul>
+    </ol>
   </div>
 
   <!--  -->
