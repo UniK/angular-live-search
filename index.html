@@ -5,23 +5,26 @@
     <link rel="stylesheet" href="home.css" media="screen" title="no title" charset="utf-8">
     <title></title>
   </head>
-  <body ng-app="myApp" ng-controller="KeywordController as keyword">
+  <body ng-app="myApp" ng-controller="KeywordController as vm">
 
 
 
   <div class="keyboard">
 
-    <div ng-show="input.length">
-      <p ng-repeat="word in keyword.word | filter:input | limitTo: 3">{{ word }}</p>
+    <div ng-show="vm.input.length">
+      <p ng-repeat="word in vm.word | filter: vm.input | limitTo: 3">{{ word }}</p>
     </div>
 
-    <input ng-model="input" type="text">
+    <input ng-model="vm.input" type="text">
 
     <ol>
-      <li ng-repeat="letter in keyword.letters">{{ letter }}</li>
-      <li class="special">clear</li>
-      <li class="special">delete</li>
-      <li class="special">space</li>
+      <!-- [a-z][0-9] -->
+      <li ng-repeat="letter in vm.letters" ng-click="vm.addLetter($event)">{{ letter }}</li>
+      <!-- special buttons -->
+      <!-- vm.input = '' -->
+      <li class="special" ng-click="vm.input = ''">clear</li> 
+      <li class="special" ng-click="">space</li>
+      <li class="special" ng-click="vm.delete()">delete</li>
     </ol>
   </div>
 

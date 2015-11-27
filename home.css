@@ -50,6 +50,9 @@ input {
   font-family: monospace;
   font-size: 16pt;
 }
+input:active {
+  border: none;
+}
 
 /* touch feedback animation */
 .anim:hover {
