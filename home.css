@@ -21,6 +21,12 @@ body {
   background: #C7D5D8;
 }
 
+.keyboard.special {
+  color: #272C33;
+  background:#79ADD3;
+  border: 1px solid blue;
+}
+
 p {
   color: white;
   font-family: monospace;
