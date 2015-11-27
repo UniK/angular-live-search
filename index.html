@@ -11,8 +11,8 @@
 
   <div class="keyboard">
 
-    <div ng-show="input">
-      <p ng-repeat="word in keyword.word">{{ word }}</p>
+    <div ng-show="input.length ">
+      <p ng-repeat="word in keyword.word | filter:input">{{ word }}</p>
     </div>
 
     <input ng-model="input" type="text">
