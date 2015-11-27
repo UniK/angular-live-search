@@ -1,5 +1,5 @@
 body {
-  background: darkgrey;
+  background: #272C33;
 }
 .keyboard, input {
   border: 1px solid black;
@@ -8,10 +8,60 @@ body {
 }
 
 .keyboard li {
-  /* border: 1px solid blue; */
+  /*border: 1px solid blue;*/
+  padding: 4px 10px;
   display: inline-block;
-  margin: 10px 10px;
+  margin: 0 0;
+  color: #79ADD3;
+  font-family: monospace;
+  font-size: 16pt;
+}
+
+.keyboard li:active {
+  background: #C7D5D8;
+}
+
+p {
   color: white;
   font-family: monospace;
-  font-size: 12pt;
+  font-size: 16pt;
+}
+
+input {
+  color: #79ADD3;
+  background: transparent;
+  border: none;
+  font-family: monospace;
+  font-size: 16pt;
+}
+
+/* touch feedback animation */
+.anim:hover {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #333;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s ease-in-out;
+  animation: sk-scaleout 1.0s ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
 }

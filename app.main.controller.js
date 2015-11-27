@@ -9,8 +9,8 @@
 
     /* @ngInject */
     function KeywordController() {
-        var vm = this;
-        vm.word = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+        var self = this;
+        self.word = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
         activate();
 
