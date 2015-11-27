@@ -1,0 +1,17 @@
+body {
+  background: darkgrey;
+}
+.keyboard, input {
+  border: 1px solid black;
+  margin: 0px auto;
+  width: 270px;
+}
+
+.keyboard li {
+  /* border: 1px solid blue; */
+  display: inline-block;
+  margin: 10px 10px;
+  color: white;
+  font-family: monospace;
+  font-size: 12pt;
+}
